@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="contenedorLista">
+        <div class="elementoLista">
+            <h2 id="sname">Thunderstruck</h2>
+            <h3>AC/DC</h3>
+            <h3>1990</h3>
+            <div class="buttonContainer">
+                <button class="spotifyButton"><a href="https://open.spotify.com/intl-es/track/4PTG3Z6ehGkBFwjybzWkR8?si=f4b33659a13a4e5f" target="_blank"><img src="assets/images/spotify.png"></a></button>
+                <button class="editButton" onclick="Javascript:handleClickEdit(0)"><img src="assets/images/edit.png"></button>
+            </div> 
+        </div>
+        <div class="elementoLista">
+            <h2 id="sname">Part-Time Lover</h2>
+            <h3>Stevie Wonder</h3>
+            <h3>1985</h3>
+            <div class="buttonContainer">
+                <button class="spotifyButton"><a href="https://open.spotify.com/intl-es/track/4PTG3Z6ehGkBFwjybzWkR8?si=f4b33659a13a4e5f" target="_blank"><img src="assets/images/spotify.png"></a></button>
+                <button class="editButton" onclick="Javascript:handleClickEdit(1)"><img src="assets/images/edit.png"></button>
+            </div> 
+        </div>
+        <div class="elementoLista">
+            <h2 id="sname">Under Pressure</h2>
+            <h3>Queen</h3>
+            <h3>1981</h3>
+            <div class="buttonContainer">
+                <button class="spotifyButton"><a href="https://open.spotify.com/intl-es/track/4PTG3Z6ehGkBFwjybzWkR8?si=f4b33659a13a4e5f" target="_blank"><img src="assets/images/spotify.png"></a></button>
+                <button class="editButton" onclick="Javascript:handleClickEdit(2)"><img src="assets/images/edit.png"></button>
+            </div> 
+        </div>
+        <div class="elementoLista">
+            <h2 id="sname">Tarzan Boy</h2>
+            <h3>Baltimora</h3>
+            <h3>1985</h3>
+            <div class="buttonContainer">
+                <button class="spotifyButton"><a href="https://open.spotify.com/intl-es/track/4PTG3Z6ehGkBFwjybzWkR8?si=f4b33659a13a4e5f" target="_blank"><img src="assets/images/spotify.png"></a></button>
+                <button class="editButton" onclick="Javascript:handleClickEdit(3)"><img src="assets/images/edit.png"></button>
+            </div> 
+        </div>
+        <div class="elementoLista">
+            <h2 id="sname">Careless Whisper</h2>
+            <h3>George Michael</h3>
+            <h3>1984</h3>
+            <div class="buttonContainer">
+                <button class="spotifyButton"><a href="https://open.spotify.com/intl-es/track/4PTG3Z6ehGkBFwjybzWkR8?si=f4b33659a13a4e5f" target="_blank"><img src="assets/images/spotify.png"></a></button>
+                <button class="editButton" onclick="Javascript:handleClickEdit(4)"><img src="assets/images/edit.png"></button>
+            </div> 
+        </div>
+    </form>
+</body>
+
+<script>
+    function handleClickEdit(id) {
+        console.log("Editando elemento con id: " + id);
+        
+        //now we open the form with the data of the element
+        window.location.href = "formulario.html?id=" + id;
+    }
+    
+</script>
+</html>

@@ -1,0 +1,83 @@
+.contenedorLista{
+    width: 74%;
+    margin: 3vh 12vw;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.elementoLista{
+    width: 10.6vw;
+    display: inline-block;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.elementoLista h2{
+    font-size: 20px;
+}
+
+.contenedorLista h3{
+    font-size: 15px;
+}
+
+button{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6600;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.editButton{
+    background-color: #00b7ff;
+}
+
+.editButton img{
+    width: 30px;
+    height: 30px;
+}
+
+.spotifyButton{
+    background-color: #1db954;
+}
+
+.spotifyButton img{
+    width: 30px;
+    height: 30px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1000px){
+    .contenedorLista{
+        width: 90%;
+        margin: 3vh 3vw;
+    }
+    
+    .elementoLista{
+        width: 82vw;
+        margin: 10px;
+    }
+
+    .elementoLista h2{
+        font-size: 100px;
+    }
+
+    .elementoLista h3{
+        font-size: 50px;
+    }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <form>
+        <input type="text" id="name" name="name" placeholder="Nombre" class=""><br>
+        <input type="text" id="artist" name="artist" placeholder="Artist/Band" class=""><br>
+        <input type="text" id="year" name="year" placeholder="Year" class=""><br>
+        <input type="text" id="linkSpotify" name="linkSpotify" placeholder="Link Spotify" class=""><br>
+        <input type="button" value="Guardar" onclick="Javascript:handleClick()">
+    </form>
+</body>
+
+<script>
+    function isValid(email) {
+        var re = /\S+@\S+\.\S+/;
+        return re.test(email);
+    }
+
+    function checkForEmpty(fname, lname, email, password1, password2) {
+        if (fname == "") {
+            document.getElementById('fname').classList.add('invalid');
+        } else {
+            document.getElementById('fname').classList.remove('invalid');
+        }
+        if (lname == "") {
+            document.getElementById('lname').classList.add('invalid');
+        } else {
+            document.getElementById('lname').classList.remove('invalid');
+        }
+        if (email == "") {
+            document.getElementById('email').classList.add('invalid');
+        } else {
+            document.getElementById('email').classList.remove('invalid');
+        }
+        if (password1 == "") {
+            document.getElementById('password1').classList.add('invalid');
+        } else {
+            document.getElementById('password1').classList.remove('invalid');
+        }
+        if (password2 == "") {
+            document.getElementById('password2').classList.add('invalid');
+        } else {
+            document.getElementById('password2').classList.remove('invalid');
+        }
+    }
+
+    function handleClick() {
+        var fname = document.getElementById('fname').value;
+        var lname = document.getElementById('lname').value;
+        var email = document.getElementById('email').value;
+        var password1 = document.getElementById('password1').value;
+        var password2 = document.getElementById('password2').value;
+        
+        checkForEmpty(fname, lname, email, password1, password2);
+
+        if (password1 != password2) {
+            alert("Las contraseñas no coinciden");
+        } else if (fname == "" || lname == "" || email == "" || password1 == "" || password2 == "") {
+            alert("Por favor llena todos los campos");
+        } else {
+            if (isValid(email)){
+                alert("Registro exitoso");
+            } else {
+                alert("Email no valido");
+            }
+        }
+    }
+    
+</script>
+</html>
